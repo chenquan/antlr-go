@@ -1,4 +1,4 @@
-// Code generated from D:/chenquan/golang/antrl-go/calculate\LabeledExpr.g4 by ANTLR 4.9.2. DO NOT EDIT.
+// Code generated from D:/chenquan/golang/antlr-go/calculate\LabeledExpr.g4 by ANTLR 4.9.2. DO NOT EDIT.
 
 package parser // LabeledExpr
 
@@ -45,6 +45,12 @@ func (s *BaseLabeledExprListener) EnterBlank(ctx *BlankContext) {}
 // ExitBlank is called when production blank is exited.
 func (s *BaseLabeledExprListener) ExitBlank(ctx *BlankContext) {}
 
+// EnterNumber is called when production number is entered.
+func (s *BaseLabeledExprListener) EnterNumber(ctx *NumberContext) {}
+
+// ExitNumber is called when production number is exited.
+func (s *BaseLabeledExprListener) ExitNumber(ctx *NumberContext) {}
+
 // EnterParens is called when production parens is entered.
 func (s *BaseLabeledExprListener) EnterParens(ctx *ParensContext) {}
 
@@ -68,9 +74,3 @@ func (s *BaseLabeledExprListener) EnterId(ctx *IdContext) {}
 
 // ExitId is called when production id is exited.
 func (s *BaseLabeledExprListener) ExitId(ctx *IdContext) {}
-
-// EnterInt is called when production int is entered.
-func (s *BaseLabeledExprListener) EnterInt(ctx *IntContext) {}
-
-// ExitInt is called when production int is exited.
-func (s *BaseLabeledExprListener) ExitInt(ctx *IntContext) {}

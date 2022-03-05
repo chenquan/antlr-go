@@ -1,4 +1,4 @@
-// Code generated from D:/chenquan/golang/antrl-go/calculate\LabeledExpr.g4 by ANTLR 4.9.2. DO NOT EDIT.
+// Code generated from D:/chenquan/golang/antlr-go/calculate\LabeledExpr.g4 by ANTLR 4.9.2. DO NOT EDIT.
 
 package parser // LabeledExpr
 
@@ -20,6 +20,9 @@ type LabeledExprVisitor interface {
 	// Visit a parse tree produced by LabeledExprParser#blank.
 	VisitBlank(ctx *BlankContext) interface{}
 
+	// Visit a parse tree produced by LabeledExprParser#number.
+	VisitNumber(ctx *NumberContext) interface{}
+
 	// Visit a parse tree produced by LabeledExprParser#parens.
 	VisitParens(ctx *ParensContext) interface{}
 
@@ -31,7 +34,4 @@ type LabeledExprVisitor interface {
 
 	// Visit a parse tree produced by LabeledExprParser#id.
 	VisitId(ctx *IdContext) interface{}
-
-	// Visit a parse tree produced by LabeledExprParser#int.
-	VisitInt(ctx *IntContext) interface{}
 }

@@ -1,4 +1,4 @@
-// Code generated from D:/chenquan/golang/antrl-go/calculate\LabeledExpr.g4 by ANTLR 4.9.2. DO NOT EDIT.
+// Code generated from D:/chenquan/golang/antlr-go/calculate\LabeledExpr.g4 by ANTLR 4.9.2. DO NOT EDIT.
 
 package parser // LabeledExpr
 
@@ -21,26 +21,26 @@ var parserATN = []uint16{
 	3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 3, 23, 10, 3,
 	3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 5, 4, 32, 10, 4, 3, 4, 3, 4,
 	3, 4, 3, 4, 3, 4, 3, 4, 7, 4, 40, 10, 4, 12, 4, 14, 4, 43, 11, 4, 3, 4,
-	2, 3, 6, 5, 2, 4, 6, 2, 4, 3, 2, 6, 7, 3, 2, 8, 9, 2, 48, 2, 9, 3, 2, 2,
-	2, 4, 22, 3, 2, 2, 2, 6, 31, 3, 2, 2, 2, 8, 10, 5, 4, 3, 2, 9, 8, 3, 2,
-	2, 2, 10, 11, 3, 2, 2, 2, 11, 9, 3, 2, 2, 2, 11, 12, 3, 2, 2, 2, 12, 3,
-	3, 2, 2, 2, 13, 14, 5, 6, 4, 2, 14, 15, 7, 12, 2, 2, 15, 23, 3, 2, 2, 2,
-	16, 17, 7, 10, 2, 2, 17, 18, 7, 3, 2, 2, 18, 19, 5, 6, 4, 2, 19, 20, 7,
-	12, 2, 2, 20, 23, 3, 2, 2, 2, 21, 23, 7, 12, 2, 2, 22, 13, 3, 2, 2, 2,
+	2, 3, 6, 5, 2, 4, 6, 2, 4, 3, 2, 10, 11, 3, 2, 12, 13, 2, 48, 2, 9, 3,
+	2, 2, 2, 4, 22, 3, 2, 2, 2, 6, 31, 3, 2, 2, 2, 8, 10, 5, 4, 3, 2, 9, 8,
+	3, 2, 2, 2, 10, 11, 3, 2, 2, 2, 11, 9, 3, 2, 2, 2, 11, 12, 3, 2, 2, 2,
+	12, 3, 3, 2, 2, 2, 13, 14, 5, 6, 4, 2, 14, 15, 7, 8, 2, 2, 15, 23, 3, 2,
+	2, 2, 16, 17, 7, 6, 2, 2, 17, 18, 7, 3, 2, 2, 18, 19, 5, 6, 4, 2, 19, 20,
+	7, 8, 2, 2, 20, 23, 3, 2, 2, 2, 21, 23, 7, 8, 2, 2, 22, 13, 3, 2, 2, 2,
 	22, 16, 3, 2, 2, 2, 22, 21, 3, 2, 2, 2, 23, 5, 3, 2, 2, 2, 24, 25, 8, 4,
-	1, 2, 25, 32, 7, 11, 2, 2, 26, 32, 7, 10, 2, 2, 27, 28, 7, 4, 2, 2, 28,
-	29, 5, 6, 4, 2, 29, 30, 7, 5, 2, 2, 30, 32, 3, 2, 2, 2, 31, 24, 3, 2, 2,
-	2, 31, 26, 3, 2, 2, 2, 31, 27, 3, 2, 2, 2, 32, 41, 3, 2, 2, 2, 33, 34,
-	12, 7, 2, 2, 34, 35, 9, 2, 2, 2, 35, 40, 5, 6, 4, 8, 36, 37, 12, 6, 2,
-	2, 37, 38, 9, 3, 2, 2, 38, 40, 5, 6, 4, 7, 39, 33, 3, 2, 2, 2, 39, 36,
-	3, 2, 2, 2, 40, 43, 3, 2, 2, 2, 41, 39, 3, 2, 2, 2, 41, 42, 3, 2, 2, 2,
-	42, 7, 3, 2, 2, 2, 43, 41, 3, 2, 2, 2, 7, 11, 22, 31, 39, 41,
+	1, 2, 25, 32, 7, 7, 2, 2, 26, 32, 7, 6, 2, 2, 27, 28, 7, 4, 2, 2, 28, 29,
+	5, 6, 4, 2, 29, 30, 7, 5, 2, 2, 30, 32, 3, 2, 2, 2, 31, 24, 3, 2, 2, 2,
+	31, 26, 3, 2, 2, 2, 31, 27, 3, 2, 2, 2, 32, 41, 3, 2, 2, 2, 33, 34, 12,
+	7, 2, 2, 34, 35, 9, 2, 2, 2, 35, 40, 5, 6, 4, 8, 36, 37, 12, 6, 2, 2, 37,
+	38, 9, 3, 2, 2, 38, 40, 5, 6, 4, 7, 39, 33, 3, 2, 2, 2, 39, 36, 3, 2, 2,
+	2, 40, 43, 3, 2, 2, 2, 41, 39, 3, 2, 2, 2, 41, 42, 3, 2, 2, 2, 42, 7, 3,
+	2, 2, 2, 43, 41, 3, 2, 2, 2, 7, 11, 22, 31, 39, 41,
 }
 var literalNames = []string{
-	"", "'='", "'('", "')'", "'*'", "'/'", "'+'", "'-'",
+	"", "'='", "'('", "')'", "", "", "", "", "'*'", "'/'", "'+'", "'-'",
 }
 var symbolicNames = []string{
-	"", "", "", "", "MUL", "DIV", "ADD", "SUB", "ID", "INT", "NEWLINE", "WS",
+	"", "", "", "", "ID", "NUMBER", "NEWLINE", "WS", "MUL", "DIV", "ADD", "SUB",
 }
 
 var ruleNames = []string{
@@ -82,14 +82,14 @@ const (
 	LabeledExprParserT__0    = 1
 	LabeledExprParserT__1    = 2
 	LabeledExprParserT__2    = 3
-	LabeledExprParserMUL     = 4
-	LabeledExprParserDIV     = 5
-	LabeledExprParserADD     = 6
-	LabeledExprParserSUB     = 7
-	LabeledExprParserID      = 8
-	LabeledExprParserINT     = 9
-	LabeledExprParserNEWLINE = 10
-	LabeledExprParserWS      = 11
+	LabeledExprParserID      = 4
+	LabeledExprParserNUMBER  = 5
+	LabeledExprParserNEWLINE = 6
+	LabeledExprParserWS      = 7
+	LabeledExprParserMUL     = 8
+	LabeledExprParserDIV     = 9
+	LabeledExprParserADD     = 10
+	LabeledExprParserSUB     = 11
 )
 
 // LabeledExprParser rules.
@@ -216,7 +216,7 @@ func (p *LabeledExprParser) Prog() (localctx IProgContext) {
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
-	for ok := true; ok; ok = (((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<LabeledExprParserT__1)|(1<<LabeledExprParserID)|(1<<LabeledExprParserINT)|(1<<LabeledExprParserNEWLINE))) != 0) {
+	for ok := true; ok; ok = (((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<LabeledExprParserT__1)|(1<<LabeledExprParserID)|(1<<LabeledExprParserNUMBER)|(1<<LabeledExprParserNEWLINE))) != 0) {
 		{
 			p.SetState(6)
 			p.Stat()
@@ -554,6 +554,50 @@ func (s *ExprContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) s
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
+type NumberContext struct {
+	*ExprContext
+}
+
+func NewNumberContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *NumberContext {
+	var p = new(NumberContext)
+
+	p.ExprContext = NewEmptyExprContext()
+	p.parser = parser
+	p.CopyFrom(ctx.(*ExprContext))
+
+	return p
+}
+
+func (s *NumberContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *NumberContext) NUMBER() antlr.TerminalNode {
+	return s.GetToken(LabeledExprParserNUMBER, 0)
+}
+
+func (s *NumberContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(LabeledExprListener); ok {
+		listenerT.EnterNumber(s)
+	}
+}
+
+func (s *NumberContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(LabeledExprListener); ok {
+		listenerT.ExitNumber(s)
+	}
+}
+
+func (s *NumberContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case LabeledExprVisitor:
+		return t.VisitNumber(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
 type ParensContext struct {
 	*ExprContext
 }
@@ -800,50 +844,6 @@ func (s *IdContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	}
 }
 
-type IntContext struct {
-	*ExprContext
-}
-
-func NewIntContext(parser antlr.Parser, ctx antlr.ParserRuleContext) *IntContext {
-	var p = new(IntContext)
-
-	p.ExprContext = NewEmptyExprContext()
-	p.parser = parser
-	p.CopyFrom(ctx.(*ExprContext))
-
-	return p
-}
-
-func (s *IntContext) GetRuleContext() antlr.RuleContext {
-	return s
-}
-
-func (s *IntContext) INT() antlr.TerminalNode {
-	return s.GetToken(LabeledExprParserINT, 0)
-}
-
-func (s *IntContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(LabeledExprListener); ok {
-		listenerT.EnterInt(s)
-	}
-}
-
-func (s *IntContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(LabeledExprListener); ok {
-		listenerT.ExitInt(s)
-	}
-}
-
-func (s *IntContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
-	switch t := visitor.(type) {
-	case LabeledExprVisitor:
-		return t.VisitInt(s)
-
-	default:
-		return t.VisitChildren(s)
-	}
-}
-
 func (p *LabeledExprParser) Expr() (localctx IExprContext) {
 	return p.expr(0)
 }
@@ -881,14 +881,14 @@ func (p *LabeledExprParser) expr(_p int) (localctx IExprContext) {
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
-	case LabeledExprParserINT:
-		localctx = NewIntContext(p, localctx)
+	case LabeledExprParserNUMBER:
+		localctx = NewNumberContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 
 		{
 			p.SetState(23)
-			p.Match(LabeledExprParserINT)
+			p.Match(LabeledExprParserNUMBER)
 		}
 
 	case LabeledExprParserID:
