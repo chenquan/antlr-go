@@ -30,13 +30,13 @@ func TestCalculate(t *testing.T) {
 
 	})
 	t.Run("2", func(t *testing.T) {
-		val := Calculate(`a=1.1
+		val := Calculate(`a=1
 b=1+a
 a+b
 
 
 
 `)
-		assert.EqualValues(t, "3.2", val)
+		assert.EqualValues(t, "3", val)
 	})
 }
