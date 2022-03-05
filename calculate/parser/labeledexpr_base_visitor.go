@@ -1,4 +1,4 @@
-// Code generated from D:/chenquan/golang/antrl-go/calculate\LabeledExpr.g4 by ANTLR 4.9.2. DO NOT EDIT.
+// Code generated from D:/chenquan/golang/antlr-go/calculate\LabeledExpr.g4 by ANTLR 4.9.2. DO NOT EDIT.
 
 package parser // LabeledExpr
 
@@ -24,6 +24,10 @@ func (v *BaseLabeledExprVisitor) VisitBlank(ctx *BlankContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseLabeledExprVisitor) VisitNumber(ctx *NumberContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseLabeledExprVisitor) VisitParens(ctx *ParensContext) interface{} {
 	return v.VisitChildren(ctx)
 }
@@ -37,9 +41,5 @@ func (v *BaseLabeledExprVisitor) VisitAddSub(ctx *AddSubContext) interface{} {
 }
 
 func (v *BaseLabeledExprVisitor) VisitId(ctx *IdContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
-func (v *BaseLabeledExprVisitor) VisitInt(ctx *IntContext) interface{} {
 	return v.VisitChildren(ctx)
 }
