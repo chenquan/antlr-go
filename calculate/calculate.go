@@ -42,11 +42,10 @@ func (v *parseTreeVisit) Visit(tree antlr.ParseTree) interface{} {
 		return v.VisitAssgin(val)
 	case *parser.ParensContext:
 		return v.VisitParens(val)
-
 	case *parser.IdContext:
 		return v.VisitId(val)
-	case *parser.IntContext:
-		return v.VisitInt(val)
+	case *parser.NumberContext:
+		return v.VisitNumber(val)
 	case *parser.ProgContext:
 		return v.VisitProg(val)
 	default:
@@ -61,7 +60,7 @@ func (v *parseTreeVisit) VisitPrintExpr(ctx *parser.PrintExprContext) interface{
 func (v *parseTreeVisit) VisitAssgin(ctx *parser.AssginContext) interface{} {
 	id := ctx.ID().GetText()
 	value := v.Visit(ctx.Expr())
-	v.memory[id] = value.(int)
+	v.memory[id] = value.(float64)
 	return value
 }
 
@@ -74,9 +73,9 @@ func (v *parseTreeVisit) VisitMulDiv(ctx *parser.MulDivContext) interface{} {
 	right := v.Visit(ctx.Expr(1))
 
 	if ctx.GetOp().GetTokenType() == parser.LabeledExprParserMUL {
-		return left.(int) * right.(int)
+		return left.(float64) * right.(float64)
 	}
-	return left.(int) / right.(int)
+	return left.(float64) / right.(float64)
 }
 
 func (v *parseTreeVisit) VisitAddSub(ctx *parser.AddSubContext) interface{} {
@@ -84,9 +83,9 @@ func (v *parseTreeVisit) VisitAddSub(ctx *parser.AddSubContext) interface{} {
 	right := v.Visit(ctx.Expr(1))
 
 	if ctx.GetOp().GetTokenType() == parser.LabeledExprParserSUB {
-		return left.(int) - right.(int)
+		return left.(float64) - right.(float64)
 	}
-	return left.(int) + right.(int)
+	return left.(float64) + right.(float64)
 }
 
 func (v *parseTreeVisit) VisitId(ctx *parser.IdContext) interface{} {
@@ -97,8 +96,8 @@ func (v *parseTreeVisit) VisitId(ctx *parser.IdContext) interface{} {
 	return 0
 }
 
-func (v *parseTreeVisit) VisitInt(ctx *parser.IntContext) interface{} {
-	val, _ := strconv.Atoi(ctx.INT().GetText())
+func (v *parseTreeVisit) VisitNumber(ctx *parser.NumberContext) interface{} {
+	val, _ := strconv.ParseFloat(ctx.NUMBER().GetText(), 64)
 	return val
 }
 
