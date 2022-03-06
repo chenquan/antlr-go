@@ -11,7 +11,7 @@ object
     ;
 
 pair
-    : STRING ':' value
+    : STRING COLON value
     ;
 
 array
@@ -91,4 +91,7 @@ CLOSE_BRACKET
 
 COMMA
     : ','
+    ;
+COLON
+    : ':'
     ;
