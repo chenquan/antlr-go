@@ -34,7 +34,7 @@ block
 stat
     : block
     | varDecl
-    | 'if' expr 'then' stat ('else' stat)?
+    | 'if' expr 'then' stat+ ('else' stat+)?
     | 'return' expr? ';'
     | expr '=' expr ';'
     | expr ';'
