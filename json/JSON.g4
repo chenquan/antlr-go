@@ -92,6 +92,11 @@ CLOSE_BRACKET
 COMMA
     : ','
     ;
+
 COLON
     : ':'
+    ;
+
+WS
+    : [ \t\n\r]+ -> skip
     ;
