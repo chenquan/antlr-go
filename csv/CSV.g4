@@ -2,8 +2,10 @@ grammar CSV;
 
 file
     : hdr row+;
+
 hdr
     : row;
+
 row
     : field (',' field)* '\r'? '\n';
 
@@ -12,7 +14,9 @@ field
     | STRING
     |
     ;
+
 TEXT
     : ~[,\t\n]+;
+
 STRING
     : '"' ('""' | ~'"')* '"';

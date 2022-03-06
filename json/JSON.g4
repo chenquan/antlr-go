@@ -5,7 +5,6 @@ json
     | array
     ;
 
-
 object
     : LEFT_BRACE pair (',' pair)* RIGHT_BRACE
     | LEFT_BRACE RIGHT_BRACE
@@ -14,7 +13,6 @@ object
 pair
     : STRING ':' value
     ;
-
 
 array
     : OPEN_BRACKET value (COMMA value)* CLOSE_BRACKET
@@ -30,15 +28,19 @@ value
     | FALSE
     | NULL
     ;
+
 STRING
     : '"' (ESC | ~["\\])* '"'
     ;
+
 fragment ESC
     : '\\' (["\\ /bfnrt] | UNICODE)
     ;
+
 fragment UNICODE
     : 'u' HEX HEX HEX HEX
     ;
+
 fragment HEX
     : [0-9a-fA-F]
     ;
@@ -49,10 +51,12 @@ NUMBER
     | '-'? INT EXP
     | '-'? INT
     ;
+
 fragment INT
     : '0'
     | [1-9] [0-9]*
     ;
+
 fragment EXP
     : [Ee] [+/-]? INT
     ;
@@ -60,24 +64,31 @@ fragment EXP
 TRUE
     : 'true'
     ;
+
 FALSE
     : 'false'
     ;
+
 NULL
     : 'null'
     ;
+
 LEFT_BRACE
     : '{'
     ;
+
 RIGHT_BRACE
     : '}'
     ;
+
 OPEN_BRACKET
     : '['
     ;
+
 CLOSE_BRACKET
     : ']'
     ;
+
 COMMA
     : ','
     ;
