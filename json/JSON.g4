@@ -7,8 +7,8 @@ json
 
 
 object
-    : '{' pair (',' pair)* '}'
-    | '{}'
+    : LEFT_BRACE pair (',' pair)* RIGHT_BRACE
+    | LEFT_BRACE RIGHT_BRACE
     ;
 
 pair
@@ -17,19 +17,19 @@ pair
 
 
 array
-    : '[' value (',' value)* ']'
-    | '[]';
+    : OPEN_BRACKET value (COMMA value)* CLOSE_BRACKET
+    | OPEN_BRACKET CLOSE_BRACKET
+    ;
 
 value
     : STRING
     | NUMBER
     | object
     | array
-    | 'true'
-    | 'false'
-    | 'null'
+    | TRUE
+    | FALSE
+    | NULL
     ;
-
 STRING
     : '"' (ESC | ~["\\])* '"'
     ;
@@ -42,8 +42,10 @@ fragment UNICODE
 fragment HEX
     : [0-9a-fA-F]
     ;
+
+// float
 NUMBER
-    : '-'? INT '.' INT EXP
+    : '-'? INT '.' INT EXP?
     | '-'? INT EXP
     | '-'? INT
     ;
@@ -53,4 +55,29 @@ fragment INT
     ;
 fragment EXP
     : [Ee] [+/-]? INT
+    ;
+
+TRUE
+    : 'true'
+    ;
+FALSE
+    : 'false'
+    ;
+NULL
+    : 'null'
+    ;
+LEFT_BRACE
+    : '{'
+    ;
+RIGHT_BRACE
+    : '}'
+    ;
+OPEN_BRACKET
+    : '['
+    ;
+CLOSE_BRACKET
+    : ']'
+    ;
+COMMA
+    : ','
     ;
