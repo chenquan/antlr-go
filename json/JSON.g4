@@ -6,8 +6,8 @@ json
     ;
 
 object
-    : LEFT_BRACE pair (',' pair)* RIGHT_BRACE
-    | LEFT_BRACE RIGHT_BRACE
+    : LEFT_BRACE pair (',' pair)* RIGHT_BRACE           # AnObject
+    | LEFT_BRACE RIGHT_BRACE                            # AEmptyObject
     ;
 
 pair
@@ -15,18 +15,18 @@ pair
     ;
 
 array
-    : OPEN_BRACKET value (COMMA value)* CLOSE_BRACKET
-    | OPEN_BRACKET CLOSE_BRACKET
+    : OPEN_BRACKET value (COMMA value)* CLOSE_BRACKET   # AnArray
+    | OPEN_BRACKET CLOSE_BRACKET                        # AEmptyArray
     ;
 
 value
-    : STRING
-    | NUMBER
-    | object
-    | array
-    | TRUE
-    | FALSE
-    | NULL
+    : STRING                                            # String
+    | NUMBER                                            # Atom
+    | object                                            # ObjectValue
+    | array                                             # ArrayValue
+    | TRUE                                              # Atom
+    | FALSE                                             # Atom
+    | NULL                                              # Atom
     ;
 
 STRING
