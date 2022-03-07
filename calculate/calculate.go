@@ -31,26 +31,7 @@ func (v *parseTreeVisit) VisitProg(ctx *parser.ProgContext) interface{} {
 	return val
 }
 func (v *parseTreeVisit) Visit(tree antlr.ParseTree) interface{} {
-	switch val := tree.(type) {
-	case *parser.MulDivContext:
-		return v.VisitMulDiv(val)
-	case *parser.AddSubContext:
-		return v.VisitAddSub(val)
-	case *parser.PrintExprContext:
-		return v.VisitPrintExpr(val)
-	case *parser.AssginContext:
-		return v.VisitAssgin(val)
-	case *parser.ParensContext:
-		return v.VisitParens(val)
-	case *parser.IdContext:
-		return v.VisitId(val)
-	case *parser.NumberContext:
-		return v.VisitNumber(val)
-	case *parser.ProgContext:
-		return v.VisitProg(val)
-	default:
-		panic("Unknown context")
-	}
+	return tree.Accept(v)
 }
 func (v *parseTreeVisit) VisitPrintExpr(ctx *parser.PrintExprContext) interface{} {
 	value := v.Visit(ctx.Expr())
