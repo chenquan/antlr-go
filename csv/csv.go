@@ -52,9 +52,7 @@ func (s *Load) ExitRow(ctx *parser.RowContext) {
 		fmt.Println(hdrContext.GetRuleIndex())
 		return
 	}
-	//if ctx.GetRuleIndex() == parser.CSVParserRULE_hdr {
-	//	return
-	//}
+	
 	s.rows = append(s.rows, s.currentRowFieldValues)
 }
 
